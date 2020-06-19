@@ -1,0 +1,7 @@
+<selectize></selectize>
+<div class="component" style="display: flex;flex-direction: column; align-items: center;">
+  <div *ngFor="let item of items$ | filter: filterText" style="width: 400px;" >
+    <blog-item [id]="item.id" [image]="item.url" [text]="item.content" [title]="item.title" class="card-body"></blog-item>
+  </div>
+</div>
+

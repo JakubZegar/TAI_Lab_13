@@ -1,0 +1,9 @@
+<h5 class="card-title">{{title}}</h5>
+
+<p class="card-text">
+  {{ text | summary: 35 }}
+</p>
+
+<a [routerLink]="['/blog/detail/', id]" class="card-link">
+  Więcej
+</a>

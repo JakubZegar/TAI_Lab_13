@@ -1,0 +1,12 @@
+<nav class=" nav justify-content-between">
+  <ul class="nav">
+    <li class="nav-item"><a [routerLink]="['/']">Home</a></li>
+    <li class="nav-item"><a [routerLink]="['/blog']">Blog</a></li>
+    <li class="nav-item"><a [routerLink]="['/contact']">Kontakt</a></li>
+    <li class="nav-item"><a [routerLink]="['/add-post']">Dodaj post</a></li>
+    <li class="nav-item" *ngIf="!authService.currentUser"><a [routerLink]="['/login']">Zaloguj się</a></li>
+    <li class="nav-item" *ngIf="!authService.currentUser"><a [routerLink]="['/signup']">Zarejestruj się</a></li>
+    <li class="nav-item" *ngIf="authService.currentUser"><a [routerLink]="" (click)="logOut()">Wyloguj się</a></li>
+  </ul>
+
+</nav>
